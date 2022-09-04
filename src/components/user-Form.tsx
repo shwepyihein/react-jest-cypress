@@ -1,24 +1,24 @@
-import React from "react"
-import { useForm } from "react-hook-form"
-import { useNavigate } from "react-router-dom"
-import { UserType } from "../constant/type"
+import React from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { UserType } from "../constant/type";
 
 interface userFormProps {
-  user: UserType | any
-  submitAction: (val: UserType) => void
-  submitText: string
+	user: UserType | any;
+	submitAction: (val: UserType) => void;
+	submitText: string;
 }
 
 function UserForm({ user, submitText, submitAction }: userFormProps) {
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm({
-    defaultValues: user || {},
-  })
+	const {
+		register,
+		formState: { errors },
+		handleSubmit,
+	} = useForm({
+		defaultValues: user || {},
+	});
 
-  const navigate = useNavigate()
+	const navigate = useNavigate();
 
   return (
     <div>
@@ -109,25 +109,27 @@ function UserForm({ user, submitText, submitAction }: userFormProps) {
           </div>
         </div>
 
-        <div className="mt-5 sm:mt-4 sm:flex sm:pl-4">
-          <button
-            type="submit"
-            data-cy="UpdateUser"
+				<div className="mt-5 sm:mt-4 sm:flex sm:pl-4">
+					<button
+						aria-label="submit"
+						type="submit"
             className="inline-flex w-full justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:w-auto sm:text-sm"
-          >
-            {submitText}
-          </button>
-          <button
-            type="button"
-            className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-            onClick={() => navigate("/")}
-          >
-            Back
-          </button>
-        </div>
-      </form>
-    </div>
-  )
+            data-cy="UpdateUser"
+					>
+						{submitText}
+					</button>
+					<button
+						aria-label="back"
+						type="button"
+						className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+						onClick={() => navigate("/")}
+					>
+						Back
+					</button>
+				</div>
+			</form>
+		</div>
+	);
 }
 
-export default UserForm
+export default UserForm;
