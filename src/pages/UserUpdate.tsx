@@ -45,7 +45,7 @@ const UserUpdate = () => {
   }
 
   return (
-    <div className="mt-10 h-screen justify-center flex items-center px-24  sm:mt-0 bg-gray-300">
+    <div className="h-screen justify-center flex items-center px-24  sm:mt-0 bg-gray-300">
       <div className="md:grid md:grid-cols-3 md:gap-6">
         <div className="md:col-span-1">
           <div className="px-4 sm:px-0">
@@ -55,7 +55,7 @@ const UserUpdate = () => {
           </div>
         </div>
         {isLoading && <Loading />}
-        <div className="mt-5 md:col-span-2 md:mt-0">
+        <div className="mt-5 md:col-span-3 md:mt-0">
           {userDetail && (
             <UserForm
               submitText={"update"}

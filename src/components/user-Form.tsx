@@ -33,6 +33,7 @@ function UserForm({ user, submitText, submitAction }: userFormProps) {
           <div className="mt-1">
             <input
               type="text"
+              data-cy="username"
               className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="User Name"
               {...register("username", { required: true })}
@@ -51,6 +52,7 @@ function UserForm({ user, submitText, submitAction }: userFormProps) {
           </label>
           <div className="mt-1">
             <input
+                   data-cy="email"
               className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="example@gmail.com"
               type="email"
@@ -75,6 +77,7 @@ function UserForm({ user, submitText, submitAction }: userFormProps) {
           </label>
           <div className="mt-1">
             <input
+              data-cy="phone"
               type="text"
               className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="phone"
@@ -95,6 +98,7 @@ function UserForm({ user, submitText, submitAction }: userFormProps) {
           <div className="mt-1">
             <input
               type="text"
+              data-cy="website"
               className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
               placeholder="website"
               {...register("website", { required: true })}
@@ -108,6 +112,7 @@ function UserForm({ user, submitText, submitAction }: userFormProps) {
         <div className="mt-5 sm:mt-4 sm:flex sm:pl-4">
           <button
             type="submit"
+            data-cy="UpdateUser"
             className="inline-flex w-full justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:w-auto sm:text-sm"
           >
             {submitText}
