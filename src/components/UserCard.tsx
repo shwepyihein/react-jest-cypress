@@ -116,7 +116,7 @@ const UserCard = ({ user, handleDialog }: UserCardProps) => {
 					}}
 					className="relative w-full text-center focus:rounded-md  hover:text-red-300 -ml-px bg-gray-200  border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:border-red-300 focus:outline-none focus:ring-1 focus:ring-red-300"
           data-testid={`edit_${user.id}`}
-           data-cy={`edit_${user.id}`}
+          data-cy={`edit_${user.id}`}
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

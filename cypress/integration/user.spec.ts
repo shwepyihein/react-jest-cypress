@@ -78,9 +78,9 @@ describe('UI for User api with token', () => {
   });
 
   it('Update USer', () => {
-    cy.get('[data-cy="edit_5"]').click({ multiple: true, force: true });
+    cy.get('[data-cy="edit_1"]').click({ multiple: true, force: true });
 
-    cy.location('pathname', { timeout: 10000 }).should('eq', '/update/5');
+    cy.location('pathname', { timeout: 10000 }).should('eq', '/update/1');
 
     cy.get('[data-cy="username"]').clear().type(`Ervin Howel;`);
     cy.get('[data-cy="email"]').clear().type(`Ervin@gmail.com`);
